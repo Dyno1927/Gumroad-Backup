@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+:root {
+  --bg: #f6f7fb; --card: #ffffff; --border: #e3e7f3;
+  --accent: #8ea0ef; --accent-strong: #4a5588;
+  --text: #11131a; --muted: #5b6472; --btn-border: #aebff5;
+  --radius: 10px; --max-width: 68ch;
+  --s1: 0.5rem; --s2: 1rem; --s3: 1.5rem; --s4: 2rem; --s5: 3rem;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6;
+  min-height: 100vh; padding: var(--s4) var(--s3);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(142,160,239,0.06) 0%, transparent 70%);
+}
+.page { max-width: var(--max-width); margin: 0 auto; }
+.page-nav { display: flex; gap: var(--s3); flex-wrap: wrap; margin-bottom: var(--s4); font-size: 0.875rem; }
+.page-nav a { color: var(--accent-strong); text-decoration: none; font-weight: 500; }
+.page-nav a:hover { text-decoration: underline; }
+article { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--s4); }
+.hero h1 { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 700; letter-spacing: -0.02em; }
+.hero .tagline { font-size: 1.05rem; color: var(--text); margin-top: var(--s1); }
+.hero p { margin: var(--s2) 0 0; color: var(--muted); }
+h2 { font-size: 1.15rem; font-weight: 600; margin: var(--s4) 0 var(--s1); }
+h2:first-of-type { margin-top: var(--s2); }
+p { color: var(--text); margin-bottom: var(--s2); }
+p.muted { color: var(--muted); }
+ul { margin: 0 0 var(--s2) var(--s3); list-style: none; }
+ul li { margin-bottom: var(--s1); padding-left: 1.1em; position: relative; }
+ul li::before { content: "\203A"; color: var(--accent-strong); position: absolute; left: 0; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s2); margin-top: var(--s1); }
+.card { border: 1px solid var(--border); border-radius: var(--radius); padding: var(--s2) var(--s3); text-decoration: none; color: var(--text); display: block; background: #fbfbff; }
+.card h3 { font-size: 0.98rem; font-weight: 600; }
+.card p { font-size: 0.85rem; color: var(--muted); margin: var(--s1) 0; }
+.card .lang { font-size: 0.72rem; font-weight: 600; color: var(--accent-strong); text-transform: uppercase; letter-spacing: 0.05em; }
+.card .go { font-size: 0.8rem; color: var(--accent-strong); font-weight: 500; }
+.card:hover { border-color: var(--accent); }
+.card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.card.featured .card-title { color: var(--accent-strong); font-weight: 650; }
+a { color: var(--accent-strong); }
+.contact { margin-top: var(--s3); }
+.note { border-left: 3px solid var(--accent); background: rgba(142,160,239,0.06); padding: var(--s2) var(--s3); border-radius: 0 var(--radius) var(--radius) 0; color: var(--muted); font-size: 0.9rem; margin: var(--s3) 0; }
+.footer { text-align: center; padding: var(--s4) 0 var(--s2); margin-top: var(--s2); }
+.socials { display: flex; justify-content: center; gap: var(--s3); flex-wrap: wrap; }
+.social-link { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+.social-link:hover { color: var(--accent-strong); }
+@media (min-width: 768px) { body { padding: var(--s5) var(--s4); } }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="page-nav">
+    <a href="https://dyno1927.gumroad.com">Home</a>
+    <a href="https://dyno1927.gumroad.com/support">Support</a>
+  </nav>
+
+  <article>
+    <section class="hero">
+      <h1>Hey, I'm Khanishk.</h1>
+      <p class="tagline">A software-learning student who builds real things to <em>actually</em> understand them — C from scratch, and Relayzen, my first published tool.</p>
+      <p>I live in India. I learn in public — my repos are an honest record of where I am. Right now that's pointers and heap memory in C; next up is an HTTP server from scratch.</p>
+    </section>
+
+    <h2>What I'm doing now</h2>
+    <ul>
+      <li>Learning C properly — pointers, heap memory, a dynamic array built from scratch</li>
+      <li>Next on the list: an HTTP server from scratch</li>
+      <li>Ship it, then measure it — every number on this page is real</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <p class="muted">Everything I make is a learning project first. Some are even useful.</p>
+    <div class="grid">
+      <a class="card" href="https://github.com/Dyno1927/Dynamic-Array">
+        <h3>Dynamic Array</h3>
+        <p>Growing vector in C — first real ownership of heap memory, ASan-clean.</p>
+        <span class="lang">C</span> <span class="go">→</span>
+      </a>
+      <a class="card" href="https://github.com/Dyno1927/Sudoku-Solver">
+        <h3>Sudoku Solver</h3>
+        <p>Backtracking solver in C — tries numbers, undoes dead ends.</p>
+        <span class="lang">C</span> <span class="go">→</span>
+      </a>
+      <a class="card" href="https://github.com/Dyno1927/Password-Manager">
+        <h3>Password Manager</h3>
+        <p>CLI password manager in C — structs, strings, file I/O.</p>
+        <span class="lang">C</span> <span class="go">→</span>
+      </a>
+      <a class="card" href="https://github.com/Dyno1927/Aroma-Spices">
+        <h3>Aroma Spices</h3>
+        <p>Full-stack e-commerce for my family's real spice business.</p>
+        <span class="lang">Node / Vue / Mongo</span> <span class="go">→</span>
+      </a>
+      <a class="card featured" href="https://dyno1927.gumroad.com/l/relayzen">
+        <h3 class="card-title">Relayzen</h3>
+        <p>My first published tool — Gmail triage that runs on your machine. The real numbers are on the listing.</p>
+        <span class="lang">Python</span> <span class="go">buy →</span>
+      </a>
+    </div>
+
+    <h2>Say hi</h2>
+    <p class="contact">
+      Email is the fastest way to reach me — <a href="mailto:khanishkg@gmail.com">khanishkg@gmail.com</a>.
+      My whole learning record lives on <a href="https://github.com/Dyno1927">github.com/Dyno1927</a>.
+    </p>
+
+    <p class="note">This page is my front profile, built by hand — plain HTML and CSS, no frameworks. The freshest cut lives in my Full-Stack Roadmap repo.</p>
+  </article>
+
+  <footer class="footer">
+    <nav class="socials" aria-label="Social links">
+      <a href="https://github.com/Dyno1927" target="_blank" rel="noopener" class="social-link">GitHub @Dyno1927</a>
+      <a href="https://x.com/Dyno1927" target="_blank" rel="noopener" class="social-link">X @Dyno1927</a>
+      <a href="https://www.reddit.com/user/T-Dyno" target="_blank" rel="noopener" class="social-link">Reddit u/T-Dyno</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
