@@ -8,9 +8,9 @@ can't undo a deletion, so I keep the source under version control here.
 
 ## Files
 
-- `profile.html` — my storefront page (`dyno1927.gumroad.com`)
-- `about.html` — my About page (`/about`)
-- `support.html` — my Support page (`/support`)
+- `Pages/Profile.html` — my storefront page (`dyno1927.gumroad.com`)
+- `Pages/About.html` — my About page (`/about`)
+- `Pages/Support.html` — my Support page (`/support`)
 
 Each page is self-contained HTML I wrote by hand (inline CSS only — ready for
 Gumroad's sanitizer).
@@ -18,8 +18,8 @@ Gumroad's sanitizer).
 ## How I keep this in sync
 
 1. Edit the page source here.
-2. Preview it: `gumroad pages preview <file>`
-3. Publish it: `gumroad pages push <profile|about|support> <file>`
+2. Preview it: `gumroad pages preview Pages/<File>.html`
+3. Publish it: `gumroad pages push <profile|about|support> Pages/<File>.html`
 4. Commit and push the change here.
 
 The pages are intentionally public the moment they're published — this repo
